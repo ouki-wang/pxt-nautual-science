@@ -17,6 +17,7 @@
         "Adafruit_GFX_Config.h",
         "glcdfont.h",
         "enums.d.ts",
+        "Nautual.ts",
         "_locales/zh/nautual-strings.json"
     ],
     "testFiles": [
