@@ -152,7 +152,7 @@ basic.forever(() => {
 ## Supported targets
 
 * for PXT/microbit
-
-## Footnotes
-
-1.  Datasheet https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf
+(The metadata above is needed for package search.)
+```package
+NFC=github:ouki-wang/pxt-nautual-science
+```
