@@ -1,0 +1,19 @@
+{
+    "name": "keyboard",
+    "version": "0.0.0",
+    "description": "This library is DFRobot gamer:bit provides the game handle control function.",
+    "license": "GNU",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "nautual.ts",
+        "_locales/zh/nautual-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": false
+}
