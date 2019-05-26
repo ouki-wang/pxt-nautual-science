@@ -1,7 +1,7 @@
 {
     "name": "nautual-science",
     "version": "0.0.0",
-    "description": "This library is DFRobot gamer:bit provides the game handle control function.",
+    "description": "This library is DFRobot nautual-science board.",
     "license": "GNU",
     "dependencies": {
         "core": "*",
