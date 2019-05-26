@@ -19,6 +19,7 @@
         "glcdfont.h",
         "enums.d.ts",
         "Nautual.ts",
+        "TCS34725.ts",
         "_locales/zh-cn/OLED-strings.json"
     ],
     "testFiles": [],

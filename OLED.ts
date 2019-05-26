@@ -15,6 +15,13 @@ namespace OLED {
         return;
     }
 
+    //% blockId=oled_show
+    //% weight=99
+    //% block="OLED show line %line|text %text"
+    //% shim=OLED::show
+    export function showText(line: number, text: string): void {
+        return;
+    }
     /**
      *Prints Next Line
      */
@@ -49,31 +56,31 @@ namespace OLED {
     export function clear(): void {
         return;
     }
-     /**
-      * prints a string on the OLED display
-      * @param text text to display, eg: "Hello, OLED!"
-      */
-     //% weight=92 blockGap=8
-     //% block="show (without newline)|string %text" 
-     //% async
-     //% blockId=oled_print_stringNoNewLine
-     //% icon="\uf1ec"
-     //% shim=OLED::showStringNoNewLine
-     export function showStringNoNewLine(text: string): void {
+    /**
+     * prints a string on the OLED display
+     * @param text text to display, eg: "Hello, OLED!"
+     */
+    //% weight=92 blockGap=8
+    //% block="show (without newline)|string %text" 
+    //% async
+    //% blockId=oled_print_stringNoNewLine
+    //% icon="\uf1ec"
+    //% shim=OLED::showStringNoNewLine
+    export function showStringNoNewLine(text: string): void {
         console.log("display: " + text);
         return;
     }
-     /**
-      * prints a string on the OLED display
-      * @param text text to display, eg: "Hello, OLED!"
-      */
-     //% weight=94 blockGap=8
-     //% block="show|string %text" 
-     //% async
-     //% blockId=oled_print_stringWithNewLine
-     //% icon="\uf1ec"
-     //% shim=OLED::showStringWithNewLine
-     export function showStringWithNewLine(text: string): void {
+    /**
+     * prints a string on the OLED display
+     * @param text text to display, eg: "Hello, OLED!"
+     */
+    //% weight=94 blockGap=8
+    //% block="show|string %text" 
+    //% async
+    //% blockId=oled_print_stringWithNewLine
+    //% icon="\uf1ec"
+    //% shim=OLED::showStringWithNewLine
+    export function showStringWithNewLine(text: string): void {
         console.log("display: " + text);
         return;
     }
@@ -115,7 +122,7 @@ namespace OLED {
     //% block="draw filled box with coordinates |x %x|y %y|w %w|h %h"
     //% async 
     //% shim=OLED::fillRect
-    export function fillRectangle(x:number,y:number, w:number, h:number): void {
+    export function fillRectangle(x: number, y: number, w: number, h: number): void {
         return;
     }
     /**
@@ -129,7 +136,7 @@ namespace OLED {
     //% block="draw outlined box with coordinates |x %x|y %y|w %w|h %h"
     //% async 
     //% shim=OLED::drawRect
-    export function drawRectangle(x:number,y:number, w:number, h:number): void {
+    export function drawRectangle(x: number, y: number, w: number, h: number): void {
         return;
     }
     /**
@@ -142,7 +149,7 @@ namespace OLED {
     //% block="draw filled circle with coordinates |x %x|y %y|r %r"
     //% async 
     //% shim=OLED::fillCircle
-    export function fillCircle(x:number,y:number, r:number): void {
+    export function fillCircle(x: number, y: number, r: number): void {
         return;
     }
     /**
@@ -155,7 +162,7 @@ namespace OLED {
     //% block="draw outlined circle with coordinates of centre |x %x|y %y| and radius r %r"
     //% async 
     //% shim=OLED::drawCircle
-    export function drawCircle(x:number,y:number, r:number): void {
+    export function drawCircle(x: number, y: number, r: number): void {
         return;
     }
     /**
@@ -169,7 +176,7 @@ namespace OLED {
     //% block="draw line OLED with coordinates |x1 %x1|y1 %y1|x2 %x2|y2 %y2"
     //% async 
     //% shim=OLED::drawLine
-    export function drawLine(x1:number,y1:number, x2:number, y2:number): void {
+    export function drawLine(x1: number, y1: number, x2: number, y2: number): void {
         return;
     }
 
@@ -181,7 +188,7 @@ namespace OLED {
     //% block="show progress of percentage progress %progress|"
     //% async 
     //% shim=OLED::showProgress
-    export function showProgress(progress:number): void {
+    export function showProgress(progress: number): void {
         return;
     }
 
