@@ -3,7 +3,7 @@
 
 using namespace pxt;
 
-namespace Nautual {
+namespace OLED {
 	#define SSD1306_ADDRESS 0x78
 	#undef printf
 

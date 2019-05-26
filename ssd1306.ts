@@ -1,5 +1,5 @@
 //% color=#27b0ba weight=100 icon="\uf26c"
-namespace Nautual {
+namespace OLED {
 
     /**
      * initialises the i2c OLED display

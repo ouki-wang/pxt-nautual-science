@@ -1,50 +1,158 @@
-# gamePad
+# SSD1306 OLED MakeCode Package [![Build Status](https://travis-ci.org/Tinkertanker/pxt-oled-ssd1306.svg?branch=master)](https://travis-ci.org/Tinkertanker/pxt-oled-ssd1306)
 
-Micro:bit game handle expansion board.
-![image](http://wiki.dfrobot.com.cn/images/9/98/DFR0536%E5%A4%96%E5%BD%A2%E5%9B%BE.png)
----------------------------------------------------------
+This is the MakeCode Package for SSD1306 OLED controller, based on the Adafruit Arduino library available [here](https://github.com/adafruit/Adafruit_SSD1306).
 
-## Table of Contents
-
-* [URL](#url)
-* [Summary](#summary)
-* [Blocks](#blocks)
-* [License](#license)
-
-## URL
-project URL:  ```https://github.com/DFRobot/pxt-gamePad```
-
-## Summary
-
-Micro: the bit game handle is based on micro: the extension handle of the bit main board.All you need to do is plug in micro: the bit board, and you can turn micro:bit into a wireless remote control handle or a wireless game console.The product is made of acrylic sheet, and it feels good. It will not have the feel of sticking hands like exposed circuit board.
-There are 8 buttons in the game handle, and the left hand side is divided into the top, bottom, left and right buttons. The right side is X and Y, and the front leads to the two buttons of A and B.
-This game controller also has built-in vibration motor, buzzer, LED, these resources are programmable control.Using graphical programming, you can instantly turn your micro:bit into a multimedia vibrator or multimedia interactive console.
-The programming platform supports makecode graphical programming and python programming, which is a great tool for programming from entry to advanced programming education.
+## Hardware Setup
+1. Insert the OLED display into the I2C ports on the break out board.
 
 ## Blocks
+### Initialize OLED Display
+Initializes the OLED display.
 
-### 1.LED control
-![image](https://github.com/DFRobot/pxt-gamePad/blob/master/image/1.png)
+Sets up the OLED display and prepares it for use by the micro:bit.
 
-### 2.Vibration motor control
-![image](https://github.com/DFRobot/pxt-gamePad/blob/master/image/2.png)<br>
-![image](https://github.com/DFRobot/pxt-gamePad/blob/master/image/3.png)
+```sig
+OLED.init(64, 128);
+```
 
-### 3.Buttons are triggered as events.
-![image](https://github.com/DFRobot/pxt-gamePad/blob/master/image/4.png)
+This block must be placed before any of the ``show`` blocks.
 
-### 4.Check button status
-![image](https://github.com/DFRobot/pxt-gamePad/blob/master/image/5.png)
+### Show String Without Newline
+Displays a string on the OLED module without a newline.
+
+```sig
+OLED.showString1("hello, micro:bit!")
+```
+
+The ``init`` block must be placed before this.
+
+### Show String With Newline
+Displays a string on the OLED module with a newline.
+
+```sig
+OLED.showString2("hello, micro:bit!")
+```
+
+The ``init`` block must be placed before this.
 
 
-## License
+### Show Number Without newline
+Displays a number on the OLED module without a newline.
 
-GNU
+```sig
+OLED.showNumber1(123)
+```
+
+The ``init`` block must be placed before this.
+
+
+### Show Number With Newline
+Displays a number on the OLED module with a newline.
+
+```sig
+OLED.showNumber2(123)
+```
+
+The ``init`` block must be placed before this.
+
+
+### Clear Display
+Clears the display.
+
+```sig
+OLED.clear()
+```
+
+The ``init`` block must be placed before this.
+
+
+### Show Loading Screen
+Displays a pre-made loading screen.
+
+```sig
+OLED.Loading_Screen()
+```
+
+The ``init`` block must be placed before this.
+
+
+### Draw Outlined Rectangle
+Displays an outline of a rectangle.
+
+```sig
+OLED.drawRectangle(x,y,w,h)
+```
+
+The ``init`` block must be placed before this.
+
+
+### Draw Filled Rectangle
+Displays a filled rectangle.
+
+```sig
+OLED.fillRectangle(x,y,w,h)
+```
+
+The ``init`` block must be placed before this.
+
+
+### Draw Outlined Circle
+Displays an outline of a circle.
+
+```sig
+OLED.drawCircle(x,y,r)
+```
+
+The ``init`` block must be placed before this.
+
+
+### Draw Filled Circle
+Displays a filled circle.
+
+```sig
+OLED.fillCircle(x,y,r)
+```
+
+The ``init`` block must be placed before this.
+
+
+### Draw Line
+Displays a line.
+
+```sig
+OLED.drawLine(x1,y1,x2,y2)
+```
+
+The ``init`` block must be placed before this.
+
+
+### Progress bar
+Displays a progress bar with a specified percentage of progress.
+
+```sig
+OLED.showProgress()
+```
+
+The ``init`` block must be placed before this.
+
+
+## Example: Counter
+The following code is a simple counter that displays an increasing number every second.
+
+```blocks
+OLED.init(64, 128)
+let item = 0
+basic.forever(() => {
+    basic.pause(1000)
+    item += 1
+    OLED.showNumber(item)
+})
+```
 
 ## Supported targets
 
 * for PXT/microbit
-(The metadata above is needed for package search.)
-```package
-gamePad=github:DFRobot/pxt-gamePad
-```
+
+## Footnotes
+
+1.  Datasheet https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf

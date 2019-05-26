@@ -1,15 +1,13 @@
 {
-    "name": "Nautual",
-    "version": "0.0.0",
-    "description": "This library is DFRobot nautual-science board.",
-    "license": "GNU",
+    "name": "SSD1306_OLED",
+    "version": "1.2.6",
+    "description": "Tinkercademy package for SSD1306 OLED controller",
+    "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "radio": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
-        "nautual.ts",
         "ssd1306.ts",
         "SSD1306_OLED.cpp",
         "Adafruit_SSD1306.h",
@@ -18,11 +16,10 @@
         "Adafruit_GFX.cpp",
         "Adafruit_GFX_Config.h",
         "glcdfont.h",
-        "enums.d.ts",
-        "_locales/zh/nautual-strings.json"
+        "enums.d.ts"
     ],
     "testFiles": [
-        "test.ts"
+        "tests.ts"
     ],
-    "public": false
+    "public": true
 }
