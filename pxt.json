@@ -9,7 +9,7 @@
     },
     "files": [
         "README.md",
-        "ssd1306.ts",
+        "OLED.ts",
         "SSD1306_OLED.cpp",
         "Adafruit_SSD1306.h",
         "Adafruit_SSD1306.cpp",
