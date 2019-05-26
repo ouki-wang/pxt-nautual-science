@@ -18,7 +18,7 @@
         "glcdfont.h",
         "enums.d.ts",
         "Nautual.ts",
-        "_locales/zh-cn/nautual-strings.json"
+        "_locales/zh-cn/nautual-strings.json",
         "_locales/zh-cn/OLED-strings.json"
     ],
     "testFiles": [
