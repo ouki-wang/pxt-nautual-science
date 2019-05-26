@@ -20,7 +20,7 @@
 	"gamePad.keyState|block": "当按钮|%button|被按下时",
 	"gamePad.onEvent|block": "当按钮|%button|被%event|时",
 	"gamePad.vibratorMotorSpeed|block": "振动电机 强度|%degree",
-	"nautual.readingdata|block": "获取 %reading",
+	"nautual.readingdata|block": "获取 |%reading",
 	"BME280Data.Pressure|block": "压强",
 	"BME280Data.Temperature|block": "温度",
 	"BME280Data.Humidity|block": "湿度"

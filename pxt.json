@@ -1,5 +1,5 @@
 {
-    "name": "nautual-science",
+    "name": "Nautual",
     "version": "0.0.0",
     "description": "This library is DFRobot nautual-science board.",
     "license": "GNU",
@@ -10,6 +10,15 @@
     "files": [
         "README.md",
         "nautual.ts",
+        "ssd1306.ts",
+        "SSD1306_OLED.cpp",
+        "Adafruit_SSD1306.h",
+        "Adafruit_SSD1306.cpp",
+        "Adafruit_GFX.h",
+        "Adafruit_GFX.cpp",
+        "Adafruit_GFX_Config.h",
+        "glcdfont.h",
+        "enums.d.ts"
         "_locales/zh/nautual-strings.json"
     ],
     "testFiles": [

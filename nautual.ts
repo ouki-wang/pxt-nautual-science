@@ -25,8 +25,8 @@ enum BME280Data {
 /**
  * nautual block
  */
-//% color=#70c0f0 icon="\uf042" block="nautual"
-namespace nautual {
+//% color=#70c0f0 icon="\uf042" block="Nautual"
+namespace Nautual {
     let BME280_I2C_ADDR = 0x76;
 
     function setreg(reg: number, dat: number): void {
@@ -81,6 +81,7 @@ namespace nautual {
     let T = 0
     let P = 0
     let H = 0
+    let POWER_ON = 0
 
     function get(): void {
         let adc_T = (getreg(0xFA) << 12) + (getreg(0xFB) << 4) + (getreg(0xFC) >> 4)
