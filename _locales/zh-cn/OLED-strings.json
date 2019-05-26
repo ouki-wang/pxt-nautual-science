@@ -1,0 +1,7 @@
+{
+	"OLED.readingdata|block": "获取 |%reading",
+	"BME280Data.Pressure|block": "压强",
+	"BME280Data.Temperature|block": "温度",
+	"BME280Data.Humidity|block": "湿度",
+	"OLED.init|block": "初始化高度 %height|宽度 %width"
+}
