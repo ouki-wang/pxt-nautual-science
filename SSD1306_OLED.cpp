@@ -13,15 +13,15 @@ namespace OLED {
 	#endif
 
 	MicroBitI2C i2c(I2C_SDA0, I2C_SCL0);
-	Adafruit_SSD1306_I2c *oled;
-
-	void init(int height, int width){
+	Adafruit_SSD1306_I2c *oled=NULL;
+    
+    void init(int height, int width){
 		if (oled != NULL) delete oled;
 		oled = new Adafruit_SSD1306_I2c(i2c, SSD1306_ADDRESS, height, width);
 		oled->splash();
 		oled->display();
 	}
-	
+
 	//%
 	void init_terminal(int height, int width){
 		if (oled != NULL) delete oled;
@@ -30,7 +30,25 @@ namespace OLED {
 		oled->display();
 		oled->setTextCursor(0, 0);
 	}
-	
+
+	//%
+	void showNumber(int line, int n){
+        if(oled == NULL) init_terminal(64, 128);
+        //uBit.serial.printf("line=%d\n",line);
+        //uBit.serial.printf("n=%d\n",n);
+        oled->setTextCursor(0, line*8);
+		oled->printf("%d", n);
+        oled->display();
+	}
+	//%
+	void showText(int line, String text){
+        if(oled == NULL) init_terminal(64, 128);
+        //uBit.serial.printf("line=%d\n",line);
+        //uBit.serial.printf("text=%s\n",PXT_STRING_DATA(text));
+		oled->setTextCursor(0, line*8);
+		oled->printf("%s", PXT_STRING_DATA(text));
+        oled->display();
+	}
 
 	//%
     void showStringNoNewLine(String text) {
